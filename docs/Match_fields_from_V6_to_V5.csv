@@ -1,0 +1,27 @@
+case,V6,What+AC0-to+AC0-check,V5
+,mdb+AF8-id,,seq
+primary,sys+AF8-id, match+AC0ALQAtAD4-,sys+AF8-id
+,,,src
+secondary,nm+AF8-py, match+AC0ALQAtAD4-,nm+AF8-py
+secondary,nm+AF8-simp, match+AC0ALQAtAD4-,nm+AF8-simp
+secondary,nm+AF8-trad, match+AC0ALQAtAD4-,nm+AF8-trad
+secondary,x+AF8-coord, match+AC0ALQAtAD4-,x+AF8-coord
+secondary,y+AF8-coord, match+AC0ALQAtAD4-,y+AF8-coord
+secondary,pres+AF8-loc, match+AC0ALQAtAD4-,pres+AF8-loc
+secondary,type+AF8-py, match+AC0ALQAtAD4-,type+AF8-py
+secondary,type+AF8-simp, match+AC0ALQAtAD4-,type+AF8-ch
+,level,,
+secondary,beg+AF8-yr, match+AC0ALQAtAD4-,beg
+,beg+AF8-rule,,
+,beg+AF8-type,,
+secondary,end+AF8-yr, match+AC0ALQAtAD4-,end
+,end+AF8-rule,,
+,end+AF8-type,,
+,note+AF8-id,,
+secondary,obj+AF8-type, match+AC0ALQAtAD4-,obj+AF8-type
+,geo+AF8-src,,prnt+AF8-id
+,compiler,,prnt+AF8-sysid
+,geo+AF8-comp,,prnt+AF8-simp
+,checker,,prnt+AF8-py
+,entry+AF8-date,,
+,filename,,
