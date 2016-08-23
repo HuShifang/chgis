@@ -3,6 +3,13 @@
 
 # In[2]:
 
+#! /usr/bin/python3
+#
+# /v6_GISInfoTable__parents_and_children_160814.ipynb
+# /py_scripts/v6_GISInfoTable__parents_and_children_160814.py
+#
+# An experimental script for counting the number of parent rows in PartOf table (from CHGIS v6 .mdb file provided by Fudan 复旦) that each row in the GISInfo table has
+
 import pandas as pd
 from pandas import Series, DataFrame
 import numpy as np
@@ -29,8 +36,6 @@ PartOf_no_duplicates = PartOf.drop_duplicates(['CHILD_ID'])
 # cut unneeded cols and rename for merge
 PartOf_no_duplicates.drop(['CHILD_NMPY','CHILD_NMCH','CHILD_NMFT','BEG_YR','END_YR','PRT_NMPY','PRT_NMCH','PRT_ID'], axis=1, inplace=True)
 PartOf_no_duplicates = PartOf_no_duplicates.rename(columns={'CHILD_ID':'mdb_id'})
-
-# PartOf_no_duplicates
 
 # combine 
 final = pd.merge(GISInfo, PartOf_no_duplicates, on='mdb_id')

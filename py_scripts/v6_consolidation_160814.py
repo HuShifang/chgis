@@ -3,6 +3,16 @@
 
 # In[1]:
 
+#! /usr/bin/python3
+
+# /v6_consolidation_160814.ipynb
+# /py_scripts/v6_consolidation_160814.py
+
+# A script for consolidating .csv files extracted from a Microsoft Access (.mdb) file containing CHGIS v6 data provided by Fudan University 复旦大学 
+# There are two .csv files being consolidated: one contains the full contents of the original .mdb file's GISInfoTable, and the other contains only those elements in the .mdb file's MainTable that did not exist in GISInfoTable.
+# These files ultimately trace back to the quick-and-dirty script work in /v6_internal_consistency_check_160811.ipynb and the .py script of the same name, but additional manipulation had been done on that script's output using LibreOffice
+# This script's output forms half of the basis for version_merge_160822.ipynb 
+
 import pandas as pd
 import numpy as np
 from pandas import DataFrame, Series
@@ -17,8 +27,8 @@ v6_Main_only = pd.read_csv('input/MainTable_and_not_GISInfoTable.csv', low_memor
 
 # In[3]:
 
-# function for exporting dataframes to .csv files, for progress-checking
 def progress_check(df, name):
+    '''function for exporting dataframes to .csv files, for progress-checking'''
     df.to_csv('TESTING_%s.csv' % name)
 
 
@@ -39,8 +49,7 @@ mask_abnormal = v6_Main_only['BOU_ID'] == v6_Main_only['PT_ID']
 Main_abnormal = v6_Main_only[mask_abnormal]
 
 # generating DataFrame of polygon rows from abnormal rows from MainTableOnly
-# HAVE TO MASK 
-mask_polygons = Main_abnormal['X_COOR'] == 0
+http://localhost:8888/notebooks/mask_polygons = Main_abnormal['X_COOR'] == 0
 Main_abnormal_polygons = Main_abnormal[mask_polygons]
 Main_abnormal_polygons['orig_id'] = Main_abnormal_polygons['BOU_ID']
 Main_abnormal_polygons['obj_type'] = 'POLYGON'
@@ -51,39 +60,6 @@ mask_points = Main_abnormal['X_COOR'] != 0
 Main_abnormal_points = Main_abnormal[mask_points]
 Main_abnormal_points['orig_id'] = Main_abnormal_points['PT_ID']
 Main_abnormal_points['obj_type'] = 'POINT'
-
-
-#### Below is old as of 160813 11pm
-
-# masking for selecting rows in MainTable that have non-zero BOU_ID and PT_ID
-#mask_BOU_ID = v6_Main_only['BOU_ID']!=0
-#v6_Main_issues = v6_Main_only[mask_BOU_ID]
-#mask_PT_ID = v6_Main_issues['PT_ID']!=0
-#v6_Main_issues = v6_Main_issues[mask_PT_ID]
-
-
-# CAN TOSS THIS CHUNK
-#print(v6_Main_issues)
-#v6_Main_only_masked = v6_Main_only[mask_BOU_ID]
-#mask_two_ID = v6_Main_only_masked['PT_ID']!= 0
-#v6_Main_only_masked = v6_Main_only_masked[mask_two_ID]
-
-
-# masking for distinct cases
-#mask_polygon = v6_Main_issues['X_COOR'] == 0
-#mask_point = v6_Main_issues['X_COOR'] != 0
-
-# editing columns via masks for distinct cases
-#Main_polygons = v6_Main_issues[mask_polygon]
-#Main_polygons['orig_id'] = Main_polygons['BOU_ID']
-#Main_polygons['']
-
-#Main_points = v6_Main_issues[mask_point]
-#Main_
-
-#print(Main_polygons)
-
-#Main_polygons['sys_id'] = "hvd_%d" % Main_polygons['orig_id']
 
 
 # In[24]:
@@ -107,7 +83,6 @@ v6_Main_only_processed = v6_Main_only_processed.rename(columns={'NAME_PY': 'nm_p
                               })
 # eliminating columns to be dropped in concatenation of DataFrames
 v6_Main_only_processed.drop(['BOU_ID', 'BOU_ID_EQUALS_PT_ID','BOU_ID_IN_GISINFO_SYS_ID','BOU_NOTE_ID','ISSUE?','PT_ID', 'PT_ID_IN_GISINFO_SYS_ID', 'PT_NOTE_ID', 'Unnamed: 0'], axis=1, inplace=True)
-# progress_check(v6_Main_only_processed, '160814') # LOOKS GOOD
 
 
 # In[26]:
@@ -128,9 +103,4 @@ v6_all = pd.concat([v6_GISInfo, v6_Main_only_processed])
 
 # name the result of the union of the v6 GISInfoTable and MainTable "V6_input_draft_20160811.csv"
 v6_all.to_csv('output/V6_input_draft_20160811.csv')
-
-
-# In[ ]:
-
-
 
