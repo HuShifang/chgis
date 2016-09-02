@@ -7,6 +7,9 @@
 
 # Script for comparing an input .csv file with an existing .csv file (e.g. the current CHGIS).
 # Indicates 1) matches on name and 2) strength of match on content
+# Requires the library 'pandas' to be installed, which is included in Anaconda's free Python distribution
+
+# by Stephen Ford (stephen.p.ford@gmail.com) on 2016-09-01
 
 import pandas as pd
 import os.path
