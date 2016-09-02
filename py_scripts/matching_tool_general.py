@@ -9,8 +9,6 @@
 # Indicates 1) matches on name and 2) strength of match on content
 
 import pandas as pd
-import numpy as np
-from pandas import Series, DataFrame
 import os.path
 
 
