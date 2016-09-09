@@ -1,0 +1,11 @@
+('/home/sf/chgis/build/matching_tool_general_160904_with_coordinate_truncation/setuptools-23.0.0-py3.5.egg',
+ None,
+ {'EGG-INFO', '*.pyc', '*.pyo', '*.pyd', '*.so', '*.py'},
+ 'DATA',
+ [('setuptools/script (dev).tmpl',
+   '/home/sf/chgis/build/matching_tool_general_160904_with_coordinate_truncation/setuptools-23.0.0-py3.5.egg/setuptools/script '
+   '(dev).tmpl',
+   'DATA'),
+  ('setuptools/script.tmpl',
+   '/home/sf/chgis/build/matching_tool_general_160904_with_coordinate_truncation/setuptools-23.0.0-py3.5.egg/setuptools/script.tmpl',
+   'DATA')])
