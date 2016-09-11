@@ -122,9 +122,9 @@ for field in normalized_fields:
 #han_input_fields = input_fields
 #han_chgis = chgis
 
-lex_new_data = new_data
-lex_input_fields = input_fields
-lex_chgis = chgis
+#lex_new_data = new_data
+#lex_input_fields = input_fields
+#lex_chgis = chgis
 
 
 # In[ ]:
