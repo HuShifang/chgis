@@ -1,0 +1,11 @@
+('/home/sf/chgis/build/matching_tool_general_160911c/setuptools-23.0.0-py3.5.egg',
+ None,
+ {'*.so', 'EGG-INFO', '*.pyd', '*.py', '*.pyo', '*.pyc'},
+ 'DATA',
+ [('setuptools/script (dev).tmpl',
+   '/home/sf/chgis/build/matching_tool_general_160911c/setuptools-23.0.0-py3.5.egg/setuptools/script '
+   '(dev).tmpl',
+   'DATA'),
+  ('setuptools/script.tmpl',
+   '/home/sf/chgis/build/matching_tool_general_160911c/setuptools-23.0.0-py3.5.egg/setuptools/script.tmpl',
+   'DATA')])
