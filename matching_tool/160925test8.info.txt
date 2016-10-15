@@ -1,0 +1,5 @@
+GEONAME MATCH SUMMARY OF RESULTS
+
+Report created at <built-in method now of type object at 0x7f2f90db58e0> 
+The incoming file Donghan_2014-10-02_copy.csv was compared with the target file v5_augment_2016-08-09.csv.
+The target file's fields were renamed as follows:

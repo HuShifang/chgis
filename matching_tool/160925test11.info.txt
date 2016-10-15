@@ -1,0 +1,110 @@
+SUMMARY OF RESULTS
+Generated at 02:08, 09/26/2016
+
+Incoming file: lexdata.txt.data.csv
+Target file: V6_input_draft_20160811.csv
+Output file: 160925test11.csv
+
+Rows in incoming file: 15415
+Rows in target file: 84202
+Rows in output file: 180807
+
+FREQUENCY COUNTS
+Counts given for all values; 'Name' is the field name in the output file, and 'dtype' simply indicates the type of the counts (i.e. integers)
+
+Matches by name: 
+found        179415
+not_found      1392
+Name: match, dtype: int64
+
+Fuzzy x coordinate matches: 
+False    172807
+True       8000
+Name: fuzzy_out_x_coord_match, dtype: int64
+
+Fuzzy y coordinate matches: 
+False    149509
+True      31298
+Name: fuzzy_out_y_coord_match, dtype: int64
+
+Beginning year matches: 
+False    179835
+True        972
+Name: out_beg_match, dtype: int64
+
+Ending year matches: 
+False    180029
+True        778
+Name: out_end_match, dtype: int64
+
+Year overlaps: 
+                                 134123
+ERROR__NON_NUMERIC_YEAR_VALUE     14226
+target_nested_in_incoming          8560
+incoming_nested_in_target          8058
+partial_incl_start_of_target       7283
+partial_incl_end_of_target         5100
+ERROR__END_BEFORE_BEG              1477
+CAUTION__ZEROES                    1016
+adjacent                            939
+perfect_match                        25
+Name: out_year_overlap, dtype: int64
+
+Content match strengths: 
+0    144825
+1     31017
+2      4864
+3       101
+Name: out_content_match_strength, dtype: int64
+
+BACKGROUND INFORMATION
+
+The name match key was nm_trad 
+The name match mode was fuzzy 
+The coordinate match mode was fuzzy 
+Coordinates were rounded to 2 decimal place(s)
+
+The target file's fields were renamed as follows:
+OrderedDict([('Unnamed: 0', 'tgaz_Unnamed: 0'),
+             ('beg_rule', 'tgaz_beg_rule'),
+             ('beg_type', 'tgaz_beg_type'),
+             ('beg', 'tgaz_beg'),
+             ('checker', 'tgaz_checker'),
+             ('compiler', 'tgaz_compiler'),
+             ('end_rule', 'tgaz_end_rule'),
+             ('end_type', 'tgaz_end_type'),
+             ('end', 'tgaz_end'),
+             ('entry_date', 'tgaz_entry_date'),
+             ('filename', 'tgaz_filename'),
+             ('geo_comp', 'tgaz_geo_comp'),
+             ('data_source', 'tgaz_data_source'),
+             ('level', 'tgaz_level'),
+             ('mdb_id', 'tgaz_mdb_id'),
+             ('nm_py', 'tgaz_nm_py'),
+             ('nm_simp', 'tgaz_nm_simp'),
+             ('nm_trad', 'tgaz_nm_trad'),
+             ('note_id', 'tgaz_note_id'),
+             ('obj_type', 'tgaz_obj_type'),
+             ('orig_id', 'tgaz_orig_id'),
+             ('pres_loc', 'tgaz_pres_loc'),
+             ('sys_id', 'tgaz_sys_id'),
+             ('type_py', 'tgaz_type_py'),
+             ('type_ch', 'tgaz_type_ch'),
+             ('x_coord', 'tgaz_x_coord'),
+             ('y_coord', 'tgaz_y_coord')])
+
+
+The incoming file's fields were renamed as follows:
+OrderedDict([('id', 'input_id'),
+             ('name', 'input_nm_trad'),
+             ('start', 'input_year_beg'),
+             ('end', 'input_year_end'),
+             ('dynasty', 'input_dynasty'),
+             ('oldid', 'input_other_id'),
+             ('Shu', 'input_prnt'),
+             ('JingDu', 'input_x_coord'),
+             ('WeuDu', 'input_y_coord')])
+
+
+Report generated using geoname_match.py 
+Questions or concerns? Contact Stephen Ford (stephen.p.ford@gmail.com)

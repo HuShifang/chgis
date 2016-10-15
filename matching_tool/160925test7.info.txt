@@ -1,0 +1,8 @@
+GEONAME MATCH SUMMARY OF RESULTS
+
+Report created at <built-in method now of type object at 0x7f6d8b0e78e0> 
+The incoming file Donghan_2014-10-02_copy.csv was compared with the target file v5_augment_2016-08-09.csv.
+The target file's fields were renamed as follows:
+ 		 {'nm_py': 'tgaz_nm_py', 'x_coord': 'tgaz_x_coord', 'pres_loc': 'tgaz_pres_loc', 'prnt_simp': 'tgaz_prnt_simp', 'obj_type': 'tgaz_obj_type', 'nm_trad': 'tgaz_nm_trad', 'prnt_py': 'tgaz_prnt_py', 'sys_id': 'tgaz_sys_id', 'beg': 'tgaz_beg', 'nm_simp': 'tgaz_nm_simp', 'data_source': 'tgaz_data_source', 'prnt_id': 'tgaz_prnt_id', 'type_ch': 'tgaz_type_ch', 'prnt_sysid': 'tgaz_prnt_sysid', 'y_coord': 'tgaz_y_coord', 'end': 'tgaz_end', 'type_py': 'tgaz_type_py'}
+The incoming file's fields were renamed as follows:
+ 		 {'經度': 'input_x_coord', 'END': 'input_year_end', 'BEG': 'input_year_beg', '規範碼': 'input_id', '朝代': 'input_dynasty', '緯度': 'input_y_coord', '县名': 'input_nm_trad'}

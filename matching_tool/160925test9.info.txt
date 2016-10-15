@@ -1,0 +1,78 @@
+SUMMARY OF RESULTS
+<built-in method now of type object at 0x7fb19686a8e0>
+
+Incoming file: Donghan_2014-10-02_copy.csv
+Target file: v5_augment_2016-08-09.csv
+Output file: 160925test9.csv
+
+Rows in incoming file: 1081
+Rows in target file: 77769
+Rows in output file: 6876
+
+FREQUENCY COUNTS
+Match: 
+found        6707
+not_found     169
+Name: match, dtype: int64
+
+Fuzzy x coordinate match: 
+False    4907
+True     1969
+Name: fuzzy_out_x_coord_match, dtype: int64Fuzzy y coordinate match: 
+False    4518
+True     2358
+Name: fuzzy_out_y_coord_match, dtype: int64
+
+Beginning year match: 
+False    6848
+True       28
+Name: out_beg_match, dtype: int64Ending year match: 
+False    6859
+True       17
+Name: out_end_match, dtype: int64Year overlaps: 
+                                5431
+incoming_nested_in_target        577
+partial_incl_start_of_target     234
+partial_incl_end_of_target       205
+target_nested_in_incoming        197
+ERROR__END_BEFORE_BEG            127
+CAUTION__ZEROES                   84
+adjacent                          21
+Name: out_year_overlap, dtype: int64
+
+
+
+Content match strengths: 
+0    4060
+2    1534
+1    1271
+3      11
+Name: out_content_match_strength, dtype: int64BACKGROUND INFORMATIONThe target file's fields were renamed as follows:
+OrderedDict([('sys_id', 'tgaz_sys_id'),
+             ('data_source', 'tgaz_data_source'),
+             ('nm_py', 'tgaz_nm_py'),
+             ('nm_simp', 'tgaz_nm_simp'),
+             ('nm_trad', 'tgaz_nm_trad'),
+             ('x_coord', 'tgaz_x_coord'),
+             ('y_coord', 'tgaz_y_coord'),
+             ('pres_loc', 'tgaz_pres_loc'),
+             ('type_py', 'tgaz_type_py'),
+             ('type_ch', 'tgaz_type_ch'),
+             ('beg', 'tgaz_beg'),
+             ('end', 'tgaz_end'),
+             ('obj_type', 'tgaz_obj_type'),
+             ('prnt_id', 'tgaz_prnt_id'),
+             ('prnt_sysid', 'tgaz_prnt_sysid'),
+             ('prnt_simp', 'tgaz_prnt_simp'),
+             ('prnt_py', 'tgaz_prnt_py')])
+The incoming file's fields were renamed as follows:
+OrderedDict([('規範碼', 'input_id'),
+             ('县名', 'input_nm_trad'),
+             ('BEG', 'input_year_beg'),
+             ('END', 'input_year_end'),
+             ('朝代', 'input_dynasty'),
+             ('舊規範碼', 'input_other_id'),
+             ('經度', 'input_x_coord'),
+             ('緯度', 'input_y_coord')])
+Report generated using geoname_match.py 
+Questions or concerns? Contact Stephen Ford (stephen.p.ford@gmail.com)

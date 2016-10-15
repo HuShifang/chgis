@@ -1,0 +1,19 @@
+### DEV ONLY
+# DongHan
+#incoming = pd.read_csv("/home/sf/chgis/input/sample_data/Donghan_2014-10-02_copy.csv", low_memory=False)
+#incoming_name = "Donghan_2014-10-02_copy.csv"
+
+# /home/sf/chgis/input/sample_data/Donghan_2014-10-02_copy.csv
+# /home/sf/chgis/input/sample_data/lexdata.txt.data.csv
+
+
+# v5
+#target = pd.read_csv("/home/sf/chgis/input/v5_augment_2016-08-09.csv", low_memory=False)
+#target_name = "v5_augment_2016-08-09.csv"
+
+
+# v6
+#target = pd.read_csv("/home/sf/chgis/input/V6_input_draft_20160811.csv", low_memory=False)
+#target_name = "V6_input_draft_20160811.csv"
+# /home/sf/chgis/input/v5_augment_2016-08-09.csv
+# /home/sf/chgis/input/V6_input_draft_20160811.csv
